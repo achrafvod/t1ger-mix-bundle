@@ -1249,7 +1249,7 @@ function RefillJobVehicle(objSpots, objMarker, jobValue, shopOrder)
 end
 
 function SetShopRoute(jobValue, shopOrder)
-	deliveryCache.pos = vector3(shopOrder.pos[1], shopOrder.pos[2], shopOrder.pos[3])
+	deliveryCache.pos = vector3(shopOrder.pos.x, shopOrder.pos.y, shopOrder.pos.z)
 	SetDeliveryBlip(deliveryCache.pos.x, deliveryCache.pos.y, deliveryCache.pos.z)
 	deliveryCache.vehHealth = GetVehicleBodyHealth(jobVehicle)
 	deliveryCache.parcelPrice = CalculatePrice(jobValue)
